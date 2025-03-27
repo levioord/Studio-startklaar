@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Studio Startklaar</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 </head>
-<body>
+<body class="dark">
+
+    <nav class="navbar">
+        <div class="logo">Studio Startklaar</div>
+        <ul class="nav-links">
+            <li><a href="#about">Over</a></li>
+            <li><a href="#services">Pakketten</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle">☀️/🌙</button>
+    </nav>
 
     <header class="hero">
         <div class="overlay"></div>
+        <img src="assets/hero.jpg" alt="Hero Image" class="hero-bg" />
         <div class="hero-content">
             <h1>Studio Startklaar</h1>
             <p>Webdesign voor bedrijven die klaar zijn om te lanceren.</p>
@@ -43,15 +56,22 @@
     <section id="portfolio" class="section fade-in">
         <h2>Portfolio</h2>
         <div class="portfolio">
-            <img src="https://source.unsplash.com/400x300/?website,design" alt="Project 1" />
-            <img src="https://source.unsplash.com/400x300/?technology,layout" alt="Project 2" />
-            <img src="https://source.unsplash.com/400x300/?coding,interface" alt="Project 3" />
+            <img src="assets/portfolio1.png" alt="Project 1" />
+            <img src="assets/portfolio2.png" alt="Project 2" />
+            <img src="assets/portfolio3.png" alt="Project 3" />
+            <img src="https://source.unsplash.com/400x300/?web,interface" alt="Dummy 1" />
+            <img src="https://source.unsplash.com/400x300/?app,design" alt="Dummy 2" />
         </div>
     </section>
 
     <section id="contact" class="section fade-in">
         <h2>Contact</h2>
-        <p>Heb je een vraag of wil je een offerte aanvragen? Mail ons via <a href="mailto:hallo@studiostartklaar.nl">hallo@studiostartklaar.nl</a>.</p>
+        <form action="https://formspree.io/f/moqgdprq" method="POST">
+            <input type="text" name="name" placeholder="Naam" required>
+            <input type="email" name="email" placeholder="E-mailadres" required>
+            <textarea name="message" rows="5" placeholder="Bericht" required></textarea>
+            <button type="submit" class="btn">Verstuur</button>
+        </form>
     </section>
 
     <footer>
